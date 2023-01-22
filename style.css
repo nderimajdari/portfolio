@@ -978,3 +978,10 @@ form .textarea textarea:focus::placeholder{
     -webkit-user-select:none;
     -ms-user-select:none;
 }
+@media(max-width: 769px){
+.home{
+    height: auto;
+    background-attachment: unset;
+    max-width: 100%;
+}
+}
