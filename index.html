@@ -2,13 +2,6 @@
 <!-- Created By Nderimi -->
 <html lang="en" oncontextmenu="return false" onselect="return false" ondragstart="return false">
 <head>
-    <!--bllokimi me ctrl u edhe right click copy-->
-    <script type="text/javascript">
-        document.onkeydown = function (e){
-            return false;
-        }
-    </script>
-
 
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="images\icon.png"><!-- Ikona ne Tab -->
@@ -26,22 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 </head>
 <body>
-    <!--bllokimi i copi cut paste--> 
 
-    <script type="text/javascript">      
-
-        $(document).ready(function() {
-            $('body').bind('cut copy paste',function (e){
-                e.preventDefault();
-            })
-            $('body').on("contextmenu",function(e) {
-                return false;
-            })
-        })
-
-    </script>
-    <!--Bllokimi i drag&dropit-->
-    <body ondragstart="return false;" ondrop="return false;">
 
 
     <nav class="navbar">
@@ -325,52 +303,40 @@
 <!-- Chatboti -->
 
 <input type="checkbox" id="click">
-      <label for="click">
-        <i class="fa fa-robot"></i>
+   <label for="click">
+      <i class="fa fa-robot"></i>
       <i class="fas fa-times"></i>
-      </label>
-      <div class="wrapper">
-        <div class="title" class="unselectable">Chatbot for Nderim Ajdari</div>
-        <div class="form">
-            <div class="bot-inbox inbox">
-                <div class="icon">
-                    <i class="fa fa-robot"></i>
-                </div>
-                <div class="msg-header">
-                    <p class="unselectable">To get the correct answer, please ask the question as it is in the question option for the chatbot.</p>
-                </div>
+   </label>
+<div class="wrapper">
+   <div class="head-text">
+      Chatbot AN
+   </div>
+         <div class="chat-box">
+            <div class="desc-text">
             </div>
-        </div>
-        <div class="typing-field">
-            <div class="input-data">
-                <input id="data" type="text" placeholder="Type something here.." required>
-                <button id="send-btn">Send</button>
-            </div>
-        </div>
-    </div>
+               <div class="full-chat-block">
+                  <div class="outer-container">
+                        <div class="chat-container">
+                              <div id="chatbox">
+                                 <h5 id="chat-timestamp" class="h5"></h5>
+                                 <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                              </div>
+                                    <div id="chat-bar-bottom">
+                                       <p></p>
+                                    </div>
+                        </div>
+                  </div>
+               </div>
+         </div>
+                  <div class="chat-bar-input-block">
+                      <div id="userInput">
+                        <input id="textInput" class="input-box" type="text" name="msg" placeholder="Press enter to send">
+                                       <p></p>
+                      </div>
+                  </div>
+</div>
 
-    <script>
-        $(document).ready(function(){
-            $("#send-btn").on("click", function(){
-                $value = $("#data").val();
-                $msg = '<div class="user-inbox inbox"><div class="msg-header"><p>'+ $value +'</p></div></div>';
-                $(".form").append($msg);
-                $("#data").val('');
-                
-                // start ajax code
-                $.ajax({
-                    url: 'message.php',
-                    type: 'POST',
-                    data: 'text='+$value,
-                    success: function(result){
-                        $replay = '<div class="bot-inbox inbox"><div class="icon"><i class="fas fa-user"></i></div><div class="msg-header"><p>'+ result +'</p></div></div>';
-                        $(".form").append($replay);
-                        // when chat goes down the scroll bar automatically comes to the bottom
-                        $(".form").scrollTop($(".form")[0].scrollHeight);
-                    }
-                });
-            });
-        });
-    </script>
 </body>
+<script src="responses.js"></script>
+<script src="chat.js"></script>
 </html>
