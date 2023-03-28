@@ -16,7 +16,7 @@ const getTime = () => {
   return time;
 };
 
-let firstMessage = "Hello, I'm chatbot AN! How can I help you today?";
+let firstMessage = "Hello, I'm chatbot AN! I will assist you in any question you have about Nderim Ajdari";
 document.getElementById("botStarterMessage").innerHTML = `<p class="botText"><span>${firstMessage}</span></p>`;
 
 let time = getTime();
