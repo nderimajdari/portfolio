@@ -411,10 +411,10 @@ section .title::after{
     background: #1e90ff;
 }
 .skills-content .right .css::before{
-    width: 100%;
+    width: 80%;
 }
 .skills-content .right .ccna::before{
-    width: 85%;
+    width: 95%;
 }
 .skills-content .right .cs::before{
     width: 85%;
@@ -423,7 +423,19 @@ section .title::after{
     width: 90%;
 }
 .skills-content .right .mysql::before{
+    width: 75%;
+}
+.skills-content .right .hmmm::before{
     width: 90%;
+}
+.skills-content .right .projectmanagment::before{
+    width: 80%;
+}
+.skills-content .right .php::before{
+    width: 85%;
+}
+.skills-content .right .cssbar::before{
+    width: 80%;
 }
 
 /* teams section styling */
