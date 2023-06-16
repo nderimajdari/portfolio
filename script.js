@@ -35,7 +35,7 @@ $(document).ready(function(){
 
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["Software Engineering" , "Founder/Director in EMPOWER", "Cyber Security"],
+        strings: ["Software Engineering" , "Founder/Director at EMPOWER", "Founder & CEO at NTECH-KS", "Cyber Security"],
         typeSpeed: 95,
         backSpeed: 150,
         loop: true
