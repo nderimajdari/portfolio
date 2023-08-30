@@ -434,6 +434,10 @@ section .title::after{
 .skills-content .right .php::before{
     width: 85%;
 }
+
+.skills-content .right .cypress::before{
+    width: 85%;
+}
 .skills-content .right .cssbar::before{
     width: 80%;
 }
