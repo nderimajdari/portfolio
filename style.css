@@ -411,7 +411,7 @@ section .title::after{
     background: #1e90ff;
 }
 .skills-content .right .css::before{
-    width: 80%;
+    width: 90%;
 }
 .skills-content .right .ccna::before{
     width: 95%;
